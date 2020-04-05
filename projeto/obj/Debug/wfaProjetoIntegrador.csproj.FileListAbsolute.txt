@@ -134,3 +134,15 @@ C:\Users\Matheus\Documents\MEGA\UNASP\Projeto Aula\projeto-integrador-unasp\wfaP
 C:\Users\Matheus\Documents\MEGA\UNASP\Projeto Aula\projeto-integrador-unasp\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.SalesUser.resources
 C:\Users\Matheus\Documents\MEGA\UNASP\Projeto Aula\projeto-integrador-unasp\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.ServicesUser.resources
 C:\Users\Matheus\Documents\MEGA\UNASP\Projeto Aula\projeto-integrador-unasp\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.MenuHome.resources
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.exe
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.pdb
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.csprojAssemblyReference.cache
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.Views.BillUser.resources
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.Views.CustomerUser.resources
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.Views.HomeUser.resources
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.Views.Login.resources
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.Views.MenuHome.resources
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.Views.ProductsUser.resources
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.Views.SalesUser.resources
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.Views.ServicesUser.resources
+C:\Users\Matheus\Documents\MEGA\UNASP\PIP\projeto-integrador-unasp\projeto\obj\Debug\wfaProjetoIntegrador.csproj.GenerateResource.cache
