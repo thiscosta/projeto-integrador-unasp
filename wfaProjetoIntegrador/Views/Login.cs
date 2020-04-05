@@ -7,29 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wfaProjetoIntegrador.Controllers;
 
-namespace wfaProjetoIntegrador
+
+namespace wfaProjetoIntegrador.Views
 {
     public partial class Login : Form
     {
         public Login()
         {
             InitializeComponent();
+            txtUser.Focus();
         }
-
         
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-            menuSoftti menu = new menuSoftti();
-            menu.ShowDialog();
-            this.Hide();
-
+            LoginController.login(txtUser.Text, txtPassword.Text);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

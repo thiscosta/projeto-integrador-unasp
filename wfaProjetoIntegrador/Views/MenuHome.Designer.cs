@@ -1,6 +1,6 @@
-﻿namespace wfaProjetoIntegrador
+﻿namespace wfaProjetoIntegrador.Views
 {
-    partial class menuSoftti
+    partial class MenuHome
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menuSoftti));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuHome));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.sidePanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnPowerOff = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBills = new System.Windows.Forms.Button();
             this.btnSales = new System.Windows.Forms.Button();
             this.btnServices = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
-            this.salesUserControl1 = new wfaProjetoIntegrador.SalesUserControl();
-            this.servicesUserControl1 = new wfaProjetoIntegrador.ServicesUserControl();
-            this.productsUserControl1 = new wfaProjetoIntegrador.ProductsUserControl();
-            this.customerUserControlDB = new wfaProjetoIntegrador.CustomerUserControl();
-            this.homeUserControl1 = new wfaProjetoIntegrador.HomeUserControl();
-            this.billsUsercontrol1 = new wfaProjetoIntegrador.BillsUsercontrol();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnPowerOff = new System.Windows.Forms.Button();
+            this.BillUser1 = new wfaProjetoIntegrador.Views.BillUser();
+            this.SalesUser1 = new wfaProjetoIntegrador.Views.SalesUser();
+            this.ServicesUser1 = new wfaProjetoIntegrador.Views.ServicesUser();
+            this.ProductsUser1 = new wfaProjetoIntegrador.Views.ProductsUser();
+            this.CustomerUserDB = new wfaProjetoIntegrador.Views.CustomerUser();
+            this.HomeUser1 = new wfaProjetoIntegrador.Views.HomeUser();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,47 +80,6 @@
             this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(53)))), ((int)(((byte)(157)))));
             resources.ApplyResources(this.sidePanel, "sidePanel");
             this.sidePanel.Name = "sidePanel";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(53)))), ((int)(((byte)(157)))));
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(157)))));
-            this.panel3.Controls.Add(this.pictureBox1);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.billsUsercontrol1);
-            this.panel5.Controls.Add(this.salesUserControl1);
-            this.panel5.Controls.Add(this.servicesUserControl1);
-            this.panel5.Controls.Add(this.productsUserControl1);
-            this.panel5.Controls.Add(this.customerUserControlDB);
-            this.panel5.Controls.Add(this.homeUserControl1);
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
-            // 
-            // btnPowerOff
-            // 
-            this.btnPowerOff.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnPowerOff, "btnPowerOff");
-            this.btnPowerOff.ForeColor = System.Drawing.Color.White;
-            this.btnPowerOff.Image = global::wfaProjetoIntegrador.Properties.Resources.btnPowerOff;
-            this.btnPowerOff.Name = "btnPowerOff";
-            this.btnPowerOff.UseVisualStyleBackColor = true;
-            this.btnPowerOff.Click += new System.EventHandler(this.btnPowerOff_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::wfaProjetoIntegrador.Properties.Resources.render_Softti;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // btnBills
             // 
@@ -182,55 +141,102 @@
             this.btnCustomers.UseVisualStyleBackColor = true;
             this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
-            // salesUserControl1
+            // panel2
             // 
-            resources.ApplyResources(this.salesUserControl1, "salesUserControl1");
-            this.salesUserControl1.Name = "salesUserControl1";
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(53)))), ((int)(((byte)(157)))));
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
             // 
-            // servicesUserControl1
+            // panel3
             // 
-            resources.ApplyResources(this.servicesUserControl1, "servicesUserControl1");
-            this.servicesUserControl1.Name = "servicesUserControl1";
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(157)))));
+            this.panel3.Controls.Add(this.pictureBox1);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
             // 
-            // productsUserControl1
+            // pictureBox1
             // 
-            resources.ApplyResources(this.productsUserControl1, "productsUserControl1");
-            this.productsUserControl1.Name = "productsUserControl1";
+            this.pictureBox1.Image = global::wfaProjetoIntegrador.Properties.Resources.render_Softti;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
-            // customerUserControlDB
+            // panel5
             // 
-            this.customerUserControlDB.Cursor = System.Windows.Forms.Cursors.Arrow;
-            resources.ApplyResources(this.customerUserControlDB, "customerUserControlDB");
-            this.customerUserControlDB.Name = "customerUserControlDB";
+            this.panel5.Controls.Add(this.btnPowerOff);
+            this.panel5.Controls.Add(this.BillUser1);
+            this.panel5.Controls.Add(this.SalesUser1);
+            this.panel5.Controls.Add(this.ServicesUser1);
+            this.panel5.Controls.Add(this.ProductsUser1);
+            this.panel5.Controls.Add(this.CustomerUserDB);
+            this.panel5.Controls.Add(this.HomeUser1);
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
             // 
-            // homeUserControl1
+            // btnPowerOff
             // 
-            resources.ApplyResources(this.homeUserControl1, "homeUserControl1");
-            this.homeUserControl1.Name = "homeUserControl1";
+            this.btnPowerOff.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPowerOff.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnPowerOff, "btnPowerOff");
+            this.btnPowerOff.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPowerOff.Image = global::wfaProjetoIntegrador.Properties.Resources.btnPowerOff;
+            this.btnPowerOff.Name = "btnPowerOff";
+            this.btnPowerOff.UseVisualStyleBackColor = false;
+            this.btnPowerOff.Click += new System.EventHandler(this.btnPowerOff_Click);
             // 
-            // billsUsercontrol1
+            // BillUser1
             // 
-            resources.ApplyResources(this.billsUsercontrol1, "billsUsercontrol1");
-            this.billsUsercontrol1.Name = "billsUsercontrol1";
+            this.BillUser1.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.BillUser1, "BillUser1");
+            this.BillUser1.Name = "BillUser1";
+            this.BillUser1.Load += new System.EventHandler(this.BillUser1_Load);
             // 
-            // menuSoftti
+            // SalesUser1
+            // 
+            this.SalesUser1.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.SalesUser1, "SalesUser1");
+            this.SalesUser1.Name = "SalesUser1";
+            // 
+            // ServicesUser1
+            // 
+            this.ServicesUser1.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.ServicesUser1, "ServicesUser1");
+            this.ServicesUser1.Name = "ServicesUser1";
+            // 
+            // ProductsUser1
+            // 
+            this.ProductsUser1.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.ProductsUser1, "ProductsUser1");
+            this.ProductsUser1.Name = "ProductsUser1";
+            // 
+            // CustomerUserDB
+            // 
+            this.CustomerUserDB.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.CustomerUserDB.Cursor = System.Windows.Forms.Cursors.Arrow;
+            resources.ApplyResources(this.CustomerUserDB, "CustomerUserDB");
+            this.CustomerUserDB.Name = "CustomerUserDB";
+            // 
+            // HomeUser1
+            // 
+            resources.ApplyResources(this.HomeUser1, "HomeUser1");
+            this.HomeUser1.Name = "HomeUser1";
+            // 
+            // MenuHome
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.btnPowerOff);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "menuSoftti";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Name = "MenuHome";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -251,12 +257,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnHome;
-        private HomeUserControl homeUserControl1;
-        private CustomerUserControl customerUserControlDB;
-        private ProductsUserControl productsUserControl1;
-        private ServicesUserControl servicesUserControl1;
-        private SalesUserControl salesUserControl1;
-        private BillsUsercontrol billsUsercontrol1;
+        private HomeUser HomeUser1;
+        private CustomerUser CustomerUserDB;
+        private ProductsUser ProductsUser1;
+        private ServicesUser ServicesUser1;
+        private SalesUser SalesUser1;
+        private BillUser BillUser1;
     }
 }
 

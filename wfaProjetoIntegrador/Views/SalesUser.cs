@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace wfaProjetoIntegrador
+namespace wfaProjetoIntegrador.Views
 {
-    public partial class ServicesUserControl : UserControl
+    public partial class SalesUser : UserControl
     {
-        public ServicesUserControl()
+        public SalesUser()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

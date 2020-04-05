@@ -1,6 +1,6 @@
-﻿namespace wfaProjetoIntegrador
+﻿namespace wfaProjetoIntegrador.Views
 {
-    partial class BillsUsercontrol
+    partial class BillUser
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -52,66 +52,72 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.label9.Location = new System.Drawing.Point(3, 19);
+            this.label9.Location = new System.Drawing.Point(237, 67);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(359, 78);
+            this.label9.Size = new System.Drawing.Size(384, 78);
             this.label9.TabIndex = 46;
-            this.label9.Text = "Bill Control";
+            this.label9.Text = "Bills Control";
             // 
             // dgvBill
             // 
             this.dgvBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBill.Location = new System.Drawing.Point(594, 160);
+            this.dgvBill.Location = new System.Drawing.Point(1188, 308);
+            this.dgvBill.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dgvBill.Name = "dgvBill";
-            this.dgvBill.Size = new System.Drawing.Size(483, 409);
+            this.dgvBill.Size = new System.Drawing.Size(966, 787);
             this.dgvBill.TabIndex = 66;
             // 
             // txtBillTotalPrice
             // 
-            this.txtBillTotalPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(157)))));
-            this.txtBillTotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBillTotalPrice.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBillTotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBillTotalPrice.Enabled = false;
             this.txtBillTotalPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillTotalPrice.ForeColor = System.Drawing.Color.White;
-            this.txtBillTotalPrice.Location = new System.Drawing.Point(130, 325);
+            this.txtBillTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.txtBillTotalPrice.Location = new System.Drawing.Point(260, 625);
+            this.txtBillTotalPrice.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtBillTotalPrice.Name = "txtBillTotalPrice";
-            this.txtBillTotalPrice.Size = new System.Drawing.Size(440, 16);
+            this.txtBillTotalPrice.Size = new System.Drawing.Size(880, 23);
             this.txtBillTotalPrice.TabIndex = 59;
             // 
             // txtBillPayDate
             // 
-            this.txtBillPayDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(157)))));
-            this.txtBillPayDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBillPayDate.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBillPayDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBillPayDate.Enabled = false;
             this.txtBillPayDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillPayDate.ForeColor = System.Drawing.Color.White;
-            this.txtBillPayDate.Location = new System.Drawing.Point(130, 290);
+            this.txtBillPayDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.txtBillPayDate.Location = new System.Drawing.Point(260, 558);
+            this.txtBillPayDate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtBillPayDate.Name = "txtBillPayDate";
-            this.txtBillPayDate.Size = new System.Drawing.Size(440, 16);
+            this.txtBillPayDate.Size = new System.Drawing.Size(880, 23);
             this.txtBillPayDate.TabIndex = 64;
             // 
             // txtBillDueDate
             // 
-            this.txtBillDueDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(157)))));
-            this.txtBillDueDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBillDueDate.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBillDueDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBillDueDate.Enabled = false;
             this.txtBillDueDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillDueDate.ForeColor = System.Drawing.Color.White;
-            this.txtBillDueDate.Location = new System.Drawing.Point(130, 256);
+            this.txtBillDueDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.txtBillDueDate.Location = new System.Drawing.Point(260, 492);
+            this.txtBillDueDate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtBillDueDate.Name = "txtBillDueDate";
-            this.txtBillDueDate.Size = new System.Drawing.Size(440, 16);
+            this.txtBillDueDate.Size = new System.Drawing.Size(880, 23);
             this.txtBillDueDate.TabIndex = 58;
             // 
             // txtBillCode
             // 
-            this.txtBillCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(157)))));
-            this.txtBillCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBillCode.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBillCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBillCode.Enabled = false;
             this.txtBillCode.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBillCode.ForeColor = System.Drawing.Color.White;
-            this.txtBillCode.Location = new System.Drawing.Point(130, 220);
+            this.txtBillCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.txtBillCode.Location = new System.Drawing.Point(260, 423);
+            this.txtBillCode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtBillCode.Name = "txtBillCode";
-            this.txtBillCode.Size = new System.Drawing.Size(440, 16);
+            this.txtBillCode.Size = new System.Drawing.Size(880, 23);
             this.txtBillCode.TabIndex = 65;
             // 
             // btnDeleteBill
@@ -121,9 +127,10 @@
             this.btnDeleteBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteBill.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteBill.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDeleteBill.Location = new System.Drawing.Point(394, 363);
+            this.btnDeleteBill.Location = new System.Drawing.Point(788, 698);
+            this.btnDeleteBill.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnDeleteBill.Name = "btnDeleteBill";
-            this.btnDeleteBill.Size = new System.Drawing.Size(175, 106);
+            this.btnDeleteBill.Size = new System.Drawing.Size(350, 204);
             this.btnDeleteBill.TabIndex = 55;
             this.btnDeleteBill.Text = "Delete";
             this.btnDeleteBill.UseVisualStyleBackColor = false;
@@ -135,9 +142,10 @@
             this.btnUpdateBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateBill.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateBill.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUpdateBill.Location = new System.Drawing.Point(213, 363);
+            this.btnUpdateBill.Location = new System.Drawing.Point(426, 698);
+            this.btnUpdateBill.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnUpdateBill.Name = "btnUpdateBill";
-            this.btnUpdateBill.Size = new System.Drawing.Size(175, 106);
+            this.btnUpdateBill.Size = new System.Drawing.Size(350, 204);
             this.btnUpdateBill.TabIndex = 56;
             this.btnUpdateBill.Text = "Update";
             this.btnUpdateBill.UseVisualStyleBackColor = false;
@@ -149,9 +157,10 @@
             this.btnInsertBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertBill.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertBill.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnInsertBill.Location = new System.Drawing.Point(32, 363);
+            this.btnInsertBill.Location = new System.Drawing.Point(64, 698);
+            this.btnInsertBill.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnInsertBill.Name = "btnInsertBill";
-            this.btnInsertBill.Size = new System.Drawing.Size(175, 106);
+            this.btnInsertBill.Size = new System.Drawing.Size(350, 204);
             this.btnInsertBill.TabIndex = 57;
             this.btnInsertBill.Text = "Insert";
             this.btnInsertBill.UseVisualStyleBackColor = false;
@@ -161,7 +170,8 @@
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.lbl3.Location = new System.Drawing.Point(30, 325);
+            this.lbl3.Location = new System.Drawing.Point(60, 625);
+            this.lbl3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(78, 17);
             this.lbl3.TabIndex = 48;
@@ -172,7 +182,8 @@
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.lbl2.Location = new System.Drawing.Point(30, 290);
+            this.lbl2.Location = new System.Drawing.Point(60, 558);
+            this.lbl2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(71, 17);
             this.lbl2.TabIndex = 47;
@@ -183,7 +194,8 @@
             this.lblProductCompany.AutoSize = true;
             this.lblProductCompany.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.lblProductCompany.Location = new System.Drawing.Point(30, 255);
+            this.lblProductCompany.Location = new System.Drawing.Point(60, 490);
+            this.lblProductCompany.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblProductCompany.Name = "lblProductCompany";
             this.lblProductCompany.Size = new System.Drawing.Size(74, 17);
             this.lblProductCompany.TabIndex = 53;
@@ -194,7 +206,8 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.label10.Location = new System.Drawing.Point(30, 220);
+            this.label10.Location = new System.Drawing.Point(60, 423);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(24, 17);
             this.label10.TabIndex = 54;
@@ -203,17 +216,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::wfaProjetoIntegrador.Properties.Resources.blueBills;
-            this.pictureBox1.Location = new System.Drawing.Point(349, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(-57, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 120);
+            this.pictureBox1.Size = new System.Drawing.Size(374, 231);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 67;
             this.pictureBox1.TabStop = false;
             // 
-            // BillsUsercontrol
+            // BillUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvBill);
@@ -228,8 +243,9 @@
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lblProductCompany);
             this.Controls.Add(this.label10);
-            this.Name = "BillsUsercontrol";
-            this.Size = new System.Drawing.Size(1080, 573);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Name = "BillUser";
+            this.Size = new System.Drawing.Size(2160, 1102);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -1,6 +1,6 @@
-﻿namespace wfaProjetoIntegrador
+﻿namespace wfaProjetoIntegrador.Views
 {
-    partial class HomeUserControl
+    partial class HomeUser
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -41,12 +41,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // HomeUserControl
+            // HomeUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pictureBox1);
-            this.Name = "HomeUserControl";
+            this.Name = "HomeUser";
             this.Size = new System.Drawing.Size(1080, 573);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

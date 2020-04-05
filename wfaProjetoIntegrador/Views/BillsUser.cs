@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace wfaProjetoIntegrador
+namespace wfaProjetoIntegrador.Views
 {
-    public partial class BillsUsercontrol : UserControl
+    public partial class BillUser : UserControl
     {
-        public BillsUsercontrol()
+        public BillUser()
         {
             InitializeComponent();
         }
