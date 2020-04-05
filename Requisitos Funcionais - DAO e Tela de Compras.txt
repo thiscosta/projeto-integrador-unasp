@@ -1,0 +1,20 @@
+Requisitos Funcionais
+
+1 Tela com um DatagridView Clientes;
+  - Irá realizar todo o processo DAO (Inclusão, Alteração, Remoção e Leitura) 
+  - Os campos do cliente são: Nome,Endereço, Contato, CPF (chave primária), Data de Nascimento e E-mail. Um cliente pode ter mais de um endereço (Endereço 1 e Endereço 2)
+
+2 Tela com um DatagridView Produtos;
+  - Irá realizar todo o processo DAO (Inclusão, Alteração, Remoção e Leitura)
+  - Os campos do produto são: Nome, Empresa, Categoria, Preço de Compra, Preço de Venda, Quantidade em Estoque, Código de Barras e Data de Validade
+
+3 Tela com um DatagridView Serviços;
+  - Irá realizar todo o processo DAO (Inclusão, Alteração, Remoção e Leitura)
+  - Os campos do serviço são: Identificador do Serviço, descrição e preço.
+
+4 Tela de Vendas;
+  - Id do Produto ou Serviço, Preço, Forma de Pagamento (Dinheiro, Débito ou Crédito), Quantidade de Parcelas.
+	
+5 Tela de Gerenciamento de Faturas
+ - Irá realizar todo o processo DAO (Inclusão, Alteração, Remoção e Leitura)
+ - Campos da fatura são: Identificador da Fatura, Data de Vencimento, Data de Pagamento e Valor total pago.
