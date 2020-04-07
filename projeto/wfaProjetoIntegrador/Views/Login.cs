@@ -18,26 +18,20 @@ namespace wfaProjetoIntegrador.Views
 
             UserRepository repo = new UserRepository();
             var lista = repo.getAll();
-            Console.WriteLine(lista.Count);
-
+            bool created = repo.create(new Users
+            {
+                name = "oi",
+                email = "teste@email.com",
+                password = "123"
+            });
             bool updated = repo.update(2, new Users
             {
                 name = "oi",
                 email = "teste@email.com",
                 password = "123"
             });
-
             Users user = repo.find(2);
-
-            Console.WriteLine("updated: " + updated);
-            Console.WriteLine("user: " + user.email);
-
             repo.delete(8);
-            repo.delete(3);
-            repo.delete(4);
-            repo.delete(5);
-            repo.delete(6);
-            repo.delete(7);
         }
         
         private void btnLogin_Click(object sender, EventArgs e)
