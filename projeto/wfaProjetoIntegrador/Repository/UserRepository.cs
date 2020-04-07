@@ -3,7 +3,7 @@ using wfaProjetoIntegrador.Models;
 
 namespace wfaProjetoIntegrador.Repository
 {
-    class UserRepository : BaseRepository<Users>
+    class UserRepository : BaseRepository<Users, int>
     {
         public override Users parse(IDataRecord record)
         {

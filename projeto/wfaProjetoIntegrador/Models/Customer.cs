@@ -8,7 +8,7 @@ namespace wfaProjetoIntegrador.Models
 {
     class Customer
     {
-        public String id { get; set; }
+        public int id { get; set; }
         public String cpf { get; set; }
         public String name { get; set; }
         public String contact { get; set; }

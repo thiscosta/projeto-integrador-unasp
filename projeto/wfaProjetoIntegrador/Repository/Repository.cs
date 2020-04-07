@@ -4,13 +4,13 @@ using System.Data;
 
 namespace wfaProjetoIntegrador.Repository
 {
-    interface Repository<T>
+    interface Repository<T, K>
     {
         List<T> getAll();
-        T create(T model);
-        T find(String id);
-        T update(String id, T model);
-        T delete(String id);
+        bool create(T model);
+        T find(K id);
+        bool update(K id, T model);
+        bool delete(K id);
         T parse(IDataRecord record);
 
     }
