@@ -17,7 +17,7 @@ namespace wfaProjetoIntegrador.Views
             txtUser.Focus();
 
             UserRepository repo = new UserRepository();
-            var lista = repo.getAll();
+            List<Users> lista = repo.getAll();
             bool created = repo.create(new Users
             {
                 name = "oi",
@@ -31,7 +31,7 @@ namespace wfaProjetoIntegrador.Views
                 password = "123"
             });
             Users user = repo.find(2);
-            repo.delete(8);
+            bool deleted = repo.delete(8);
         }
         
         private void btnLogin_Click(object sender, EventArgs e)
