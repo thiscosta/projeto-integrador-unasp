@@ -1,4 +1,4 @@
-create table sale_item(
+﻿create table saleitem(
 id integer primary key,
 serviceId integer,
 productId integer
@@ -24,12 +24,12 @@ price decimal(10)
 create table sale (
 id integer primary key,
 payment varchar(25),
-price decimal(),
+price decimal,
 customerId integer,
 foreign key (customerId) references customer(id)
 )
 
-create table user (
+create table users (
 id integer primary key,
 name varchar(50),
 email varchar(35),
@@ -40,7 +40,7 @@ password varchar(15)
 create table parcel (
 id integer primary key,
 price decimal(10),
-dueDate datetime,
+dueDate date,
 saleId integer,
 foreign key(saleId ) references sale (id)
 )
@@ -50,7 +50,7 @@ id integer primary key,
 cpf varchar(10),
 name varchar(50),
 contact varchar(50),
-birthdate datetime,
+birthdate date,
 email varchar(35)
 )
 
@@ -66,13 +66,13 @@ foreign key(customerId) references customer (id)
 )
 
 /* chave estrangeira referenciando o id do serviço dentro da tabela itemservico*/
-alter table saleItem add foreign key(serviceId) references service (id)
+alter table saleItem add foreign key(serviceId) references service (id);
 
 /* chave estrangeira referenciando o id do produto dentro da tabela itemservico*/
-alter table saleItem add foreign key(productId) references product (id)
+alter table saleItem add foreign key(productId) references product (id);
 
 /* chave estrangeira referenciando o id do cliente dentro da tabela compra*/
-alter table sale add foreign key(customerId) references customer (id)
+alter table sale add foreign key(customerId) references customer (id);
 
 CREATE SEQUENCE user_id_seq;
 ALTER TABLE users ALTER id SET DEFAULT NEXTVAL('user_id_seq');
@@ -81,7 +81,7 @@ CREATE SEQUENCE service_id_seq;
 ALTER TABLE service ALTER id SET DEFAULT NEXTVAL('service_id_seq');
 
 CREATE SEQUENCE saleitem_id_seq;
-ALTER TABLE saleitem ALTER id SET DEFAULT NEXTVAL('saleitem_id_seq');
+ALTER TABLE saleItem ALTER id SET DEFAULT NEXTVAL('saleitem_id_seq');
 
 CREATE SEQUENCE sale_id_seq;
 ALTER TABLE sale ALTER id SET DEFAULT NEXTVAL('sale_id_seq');

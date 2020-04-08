@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using wfaProjetoIntegrador.Controllers;
 using wfaProjetoIntegrador.Models;
 using wfaProjetoIntegrador.Repository;
+using wfaProjetoIntegrador.Util;
 
 namespace wfaProjetoIntegrador.Views
 {
@@ -12,29 +13,25 @@ namespace wfaProjetoIntegrador.Views
     {
         public Login()
         {
-            InitializeComponent();
+            InitializeComponent(); //Não mexe nessa classe
             txtUser.Focus();
 
             UserRepository repo = new UserRepository();
-            var lista = repo.getAll();
-            Console.WriteLine(lista.Count);
-
-            var usuario = new Users { name = "teste via c#", email = "teste", password = "teste" };
-
-            List<String> teste = typeof(Users).GetProperties().Select(f => f.Name).ToList();
-            teste.Remove("id");
-            string stringona = "INSERT INTO users(" + string.Join(",", teste) + ") values (";
-            foreach(var field in teste)
+            List<Users> lista = repo.getAll();
+            bool created = repo.create(new Users
             {
-                stringona += usuario.GetType().GetProperty(field).GetValue(usuario);
-
-                if(teste.IndexOf(field) != (teste.Count - 1))
-                {
-                    stringona += ", ";
-                }
-            }
-            Console.WriteLine(stringona+");");
-            teste.ToString();
+                name = "oi",
+                email = "teste@email.com",
+                password = "123"
+            });
+            bool updated = repo.update(2, new Users
+            {
+                name = "oi",
+                email = "teste@email.com",
+                password = "123"
+            });
+            Users user = repo.find(2);
+            bool deleted = repo.delete(8);
         }
         
         private void btnLogin_Click(object sender, EventArgs e)

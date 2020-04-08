@@ -83,5 +83,18 @@ namespace wfaProjetoIntegrador.Views
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            sidePanel.Height = btnReports.Height;
+            sidePanel.Top = btnReports.Top;
+            reportsUser1.BringToFront();
+            btnPowerOff.BringToFront();
+        }
+
+        private void billUser2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

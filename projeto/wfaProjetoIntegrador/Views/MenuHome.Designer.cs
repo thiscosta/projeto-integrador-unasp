@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuHome));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReports = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.btnBills = new System.Windows.Forms.Button();
@@ -49,6 +50,8 @@
             this.ProductsUser1 = new wfaProjetoIntegrador.Views.ProductsUser();
             this.CustomerUserDB = new wfaProjetoIntegrador.Views.CustomerUser();
             this.HomeUser1 = new wfaProjetoIntegrador.Views.HomeUser();
+            this.npgsqlCommandBuilder1 = new Npgsql.NpgsqlCommandBuilder();
+            this.reportsUser1 = new wfaProjetoIntegrador.Views.ReportsUser();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(44)))));
+            this.panel1.Controls.Add(this.btnReports);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.sidePanel);
             this.panel1.Controls.Add(this.btnBills);
@@ -68,6 +72,16 @@
             this.panel1.Controls.Add(this.btnCustomers);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // btnReports
+            // 
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnReports, "btnReports");
+            this.btnReports.ForeColor = System.Drawing.Color.White;
+            this.btnReports.Image = global::wfaProjetoIntegrador.Properties.Resources.btnBills;
+            this.btnReports.Name = "btnReports";
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -163,6 +177,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.reportsUser1);
             this.panel5.Controls.Add(this.btnPowerOff);
             this.panel5.Controls.Add(this.BillUser1);
             this.panel5.Controls.Add(this.SalesUser1);
@@ -221,6 +236,16 @@
             resources.ApplyResources(this.HomeUser1, "HomeUser1");
             this.HomeUser1.Name = "HomeUser1";
             // 
+            // npgsqlCommandBuilder1
+            // 
+            this.npgsqlCommandBuilder1.QuotePrefix = "\"";
+            this.npgsqlCommandBuilder1.QuoteSuffix = "\"";
+            // 
+            // reportsUser1
+            // 
+            resources.ApplyResources(this.reportsUser1, "reportsUser1");
+            this.reportsUser1.Name = "reportsUser1";
+            // 
             // MenuHome
             // 
             resources.ApplyResources(this, "$this");
@@ -263,6 +288,9 @@
         private ServicesUser ServicesUser1;
         private SalesUser SalesUser1;
         private BillUser BillUser1;
+        private System.Windows.Forms.Button btnReports;
+        private Npgsql.NpgsqlCommandBuilder npgsqlCommandBuilder1;
+        private ReportsUser reportsUser1;
     }
 }
 
