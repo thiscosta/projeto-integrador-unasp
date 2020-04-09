@@ -48,10 +48,10 @@ namespace wfaProjetoIntegrador.Repository
             return record;
         }
 
-        public T findBy(String fieldName, dynamic value)
+        public T findBy(string fieldName, dynamic value)
         {
             var connection = Connection.getConnection();
-            var query = "SELECT * FROM " + tableName + " WHERE "+fieldName+" = @"+fieldName;
+            var query = "SELECT * FROM " + tableName + " WHERE " + fieldName + " = @" + fieldName;
             var cmd = new NpgsqlCommand(query, connection);
             cmd.Parameters.AddWithValue(fieldName, value);
             var reader = cmd.ExecuteReader();
@@ -63,6 +63,75 @@ namespace wfaProjetoIntegrador.Repository
             }
             connection.Close();
             return record;
+        }
+
+        public T findBy(Dictionary<string, dynamic> fields)
+        {
+            var connection = Connection.getConnection();
+            var query = "SELECT * FROM " + tableName + " WHERE ";
+
+            var fieldList = fields.Keys.ToList<string>();
+            for (int i = 0;i< fieldList.Count; i++)
+            {
+                query += fieldList[i] + "= @" + fieldList[i];
+
+                if(!(i+1 >= fieldList.Count))
+                {
+                    query += " AND ";
+                }
+            }
+
+            var cmd = new NpgsqlCommand(query, connection);
+
+            foreach(string field in fieldList)
+            {
+                cmd.Parameters.AddWithValue(field, fields[field]);
+            }
+
+            var reader = cmd.ExecuteReader();
+
+            T record = default;
+            if (reader.Read())
+            {
+                record = parse(reader);
+            }
+            connection.Close();
+            return record;
+        }
+
+        public List<T> queryBy(Dictionary<string, dynamic> fields)
+        {
+            var connection = Connection.getConnection();
+            var query = "SELECT * FROM " + tableName + " WHERE ";
+
+            var fieldList = fields.Keys.ToList<string>();
+            for (int i = 0; i < fieldList.Count; i++)
+            {
+                query += fieldList[i] + "= @" + fieldList[i];
+
+                if (!(i + 1 >= fieldList.Count))
+                {
+                    query += " AND ";
+                }
+            }
+
+            var cmd = new NpgsqlCommand(query, connection);
+
+            foreach (string field in fieldList)
+            {
+                cmd.Parameters.AddWithValue(field, fields[field]);
+            }
+
+            var reader = cmd.ExecuteReader();
+
+            List<T> records = new List<T>();
+
+            while (reader.Read())
+            {
+                records.Add(parse(reader));
+            }
+            connection.Close();
+            return records;
         }
 
         public bool create(T model)

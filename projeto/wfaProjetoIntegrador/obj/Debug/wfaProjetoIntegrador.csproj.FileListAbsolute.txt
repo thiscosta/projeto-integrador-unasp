@@ -226,7 +226,6 @@ C:\Users\Matheus\Desktop\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\o
 C:\Users\Matheus\Desktop\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.csproj.CopyComplete
 C:\Users\Matheus\Desktop\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.exe
 C:\Users\Matheus\Desktop\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.pdb
-<<<<<<< Updated upstream
 C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\wfaProjetoIntegrador.exe.config
 C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\wfaProjetoIntegrador.exe
 C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\wfaProjetoIntegrador.pdb
@@ -481,7 +480,6 @@ C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaPro
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.pdb
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.UserControl1.resources
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.Reports.resources
->>>>>>> Stashed changes
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.exe.config
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\Microsoft.Win32.Primitives.dll
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\netstandard.dll
@@ -606,3 +604,10 @@ C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\PdfSha
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\PdfSharp.Charting.xml
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\de\PdfSharp.resources.dll
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\PdfSharp.dll
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\PdfSharp.xml
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\PdfSharp.Charting.xml
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.ReportsUser.resources

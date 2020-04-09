@@ -30,7 +30,16 @@ namespace wfaProjetoIntegrador.Views
                 password = "123"
             });
             Users user = repo.find(2);
-            Users user2 = repo.findBy("email", "teste@email.com");
+            Users user3 = repo.findBy("id", 13);
+            Users user2 = repo.findBy(new Dictionary<string, dynamic> {
+                { "id", 13 },
+                { "name", "oi" },
+                { "email", "teste@email.com" },
+                { "password", "123" }
+            });
+            List<Users> users = repo.queryBy(new Dictionary<string, dynamic> {
+                { "email", "teste@email.com" }
+            });
             bool deleted = repo.delete(8);
         }
         

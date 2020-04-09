@@ -9,6 +9,9 @@ namespace wfaProjetoIntegrador.Repository
         List<T> getAll();
         bool create(T model);
         T find(K id);
+        T findBy(string fieldName, dynamic value);
+        T findBy(Dictionary<string, dynamic> fields);
+        List<T> queryBy(Dictionary<string, dynamic> fields); 
         bool update(K id, T model);
         bool delete(K id);
         T parse(IDataRecord record);
