@@ -65,7 +65,7 @@ namespace wfaProjetoIntegrador.Repository
             return record;
         }
 
-        public T findBy(Dictionary<string, dynamic> fields)
+        public T findBy(Dictionary<string, dynamic> fields, string queryOperator = "AND")
         {
             var connection = Connection.getConnection();
             var query = "SELECT * FROM " + tableName + " WHERE ";
@@ -77,7 +77,7 @@ namespace wfaProjetoIntegrador.Repository
 
                 if(!(i+1 >= fieldList.Count))
                 {
-                    query += " AND ";
+                    query += " "+ queryOperator + " ";
                 }
             }
 
@@ -99,7 +99,7 @@ namespace wfaProjetoIntegrador.Repository
             return record;
         }
 
-        public List<T> queryBy(Dictionary<string, dynamic> fields)
+        public List<T> queryBy(Dictionary<string, dynamic> fields, string queryOperator = "AND")
         {
             var connection = Connection.getConnection();
             var query = "SELECT * FROM " + tableName + " WHERE ";
@@ -111,7 +111,7 @@ namespace wfaProjetoIntegrador.Repository
 
                 if (!(i + 1 >= fieldList.Count))
                 {
-                    query += " AND ";
+                    query += " " + queryOperator + " ";
                 }
             }
 
