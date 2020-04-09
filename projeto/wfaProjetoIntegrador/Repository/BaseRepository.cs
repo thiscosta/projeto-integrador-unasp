@@ -48,6 +48,23 @@ namespace wfaProjetoIntegrador.Repository
             return record;
         }
 
+        public T findBy(String fieldName, dynamic value)
+        {
+            var connection = Connection.getConnection();
+            var query = "SELECT * FROM " + tableName + " WHERE "+fieldName+" = @"+fieldName;
+            var cmd = new NpgsqlCommand(query, connection);
+            cmd.Parameters.AddWithValue(fieldName, value);
+            var reader = cmd.ExecuteReader();
+
+            T record = default;
+            if (reader.Read())
+            {
+                record = parse(reader);
+            }
+            connection.Close();
+            return record;
+        }
+
         public bool create(T model)
         {
             List<String> columns = typeof(T).GetProperties().Select(f => f.Name).ToList();

@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using wfaProjetoIntegrador.Controllers;
 using wfaProjetoIntegrador.Models;
 using wfaProjetoIntegrador.Repository;
-using wfaProjetoIntegrador.Util;
 
 namespace wfaProjetoIntegrador.Views
 {
@@ -31,6 +30,7 @@ namespace wfaProjetoIntegrador.Views
                 password = "123"
             });
             Users user = repo.find(2);
+            Users user2 = repo.findBy("email", "teste@email.com");
             bool deleted = repo.delete(8);
         }
         
