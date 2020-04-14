@@ -17,9 +17,11 @@ namespace wfaProjetoIntegrador.Repository
                 id = int.Parse(record["id"].ToString()),
                 cpf = record["cpf"].ToString(),
                 name = record["name"].ToString(),
-                contact = record["contact"].ToString(),
+                phone = record["phone"].ToString(),
                 birthdate = Convert.ToDateTime(record["birthdate"].ToString()),
-                email = record["email"].ToString()
+                email = record["email"].ToString(),
+                address1 = record["address1"].ToString(),
+                address2 = record["address2"].ToString()
             };
         }
     }

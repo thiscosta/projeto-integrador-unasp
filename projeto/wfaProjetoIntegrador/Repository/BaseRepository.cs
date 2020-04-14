@@ -18,7 +18,7 @@ namespace wfaProjetoIntegrador.Repository
         public List<T> getAll()
         {
             var connection = Connection.getConnection();
-            var cmd = new NpgsqlCommand("SELECT * FROM " + tableName, connection);
+            var cmd = new NpgsqlCommand("SELECT * FROM " + tableName + " ORDER BY id DESC", connection);
             var reader = cmd.ExecuteReader();
 
             List<T> records = new List<T>();
@@ -34,7 +34,7 @@ namespace wfaProjetoIntegrador.Repository
         public T find(K id)
         {
             var connection = Connection.getConnection();
-            var query = "SELECT * FROM " + tableName + " WHERE id = @id ";
+            var query = "SELECT * FROM " + tableName + " WHERE id = @id " + " ORDER BY id DESC";
             var cmd = new NpgsqlCommand(query, connection);
             cmd.Parameters.AddWithValue("id", id);
             var reader = cmd.ExecuteReader();
@@ -51,7 +51,7 @@ namespace wfaProjetoIntegrador.Repository
         public T findBy(string fieldName, dynamic value)
         {
             var connection = Connection.getConnection();
-            var query = "SELECT * FROM " + tableName + " WHERE " + fieldName + " = @" + fieldName;
+            var query = "SELECT * FROM " + tableName + " WHERE " + fieldName + " = @" + fieldName + " ORDER BY id DESC";
             var cmd = new NpgsqlCommand(query, connection);
             cmd.Parameters.AddWithValue(fieldName, value);
             var reader = cmd.ExecuteReader();
@@ -80,7 +80,7 @@ namespace wfaProjetoIntegrador.Repository
                     query += " "+ queryOperator + " ";
                 }
             }
-
+            query += " ORDER BY id DESC";
             var cmd = new NpgsqlCommand(query, connection);
 
             foreach(string field in fieldList)
@@ -115,6 +115,7 @@ namespace wfaProjetoIntegrador.Repository
                 }
             }
 
+            query += " ORDER BY id DESC";
             var cmd = new NpgsqlCommand(query, connection);
 
             foreach (string field in fieldList)

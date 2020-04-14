@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using wfaProjetoIntegrador.Views;
+using wfaProjetoIntegrador.Models;
+using wfaProjetoIntegrador.Repository;
 
 namespace wfaProjetoIntegrador.Controllers
 {
     class LoginController
     {
+        private static UserRepository repo = new UserRepository();
+
         public static void login(String userName, String password)
         {
             if(validUserName(userName))
@@ -36,12 +40,21 @@ namespace wfaProjetoIntegrador.Controllers
 
         public static Boolean validUserName(String userName)
         {
-            return true;
+            List<Users> users = repo.queryBy(new Dictionary<string, dynamic> {
+                { "email", userName }
+            });
+
+            return users.Count == 1;
         }
 
         public static Boolean validPassword(String userName, String password)
         {
-            return true;
+            List<Users> users = repo.queryBy(new Dictionary<string, dynamic> {
+                { "email", userName },
+                { "password", password },
+            });
+
+            return users.Count == 1;
         }
     }
 }

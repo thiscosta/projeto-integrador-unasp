@@ -156,6 +156,7 @@
             this.Controls.Add(this.btnInsertBill);
             this.Name = "ReportsUser";
             this.Size = new System.Drawing.Size(1080, 573);
+            this.Load += new System.EventHandler(this.ReportsUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

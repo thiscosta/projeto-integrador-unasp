@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvCustomer = new System.Windows.Forms.DataGridView();
             this.txtCustomerEmail = new System.Windows.Forms.TextBox();
             this.txtCustomerBirthday = new System.Windows.Forms.TextBox();
@@ -48,8 +49,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCustomer
@@ -59,10 +64,10 @@
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.Size = new System.Drawing.Size(483, 361);
             this.dgvCustomer.TabIndex = 42;
+            this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
             // 
             // txtCustomerEmail
             // 
-            this.txtCustomerEmail.BackColor = System.Drawing.SystemColors.Control;
             this.txtCustomerEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCustomerEmail.Enabled = false;
             this.txtCustomerEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,7 +79,6 @@
             // 
             // txtCustomerBirthday
             // 
-            this.txtCustomerBirthday.BackColor = System.Drawing.SystemColors.Control;
             this.txtCustomerBirthday.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCustomerBirthday.Enabled = false;
             this.txtCustomerBirthday.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,7 +90,6 @@
             // 
             // txtCustomerCpf
             // 
-            this.txtCustomerCpf.BackColor = System.Drawing.SystemColors.Control;
             this.txtCustomerCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCustomerCpf.Enabled = false;
             this.txtCustomerCpf.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,7 +101,6 @@
             // 
             // txtCustomerPhone
             // 
-            this.txtCustomerPhone.BackColor = System.Drawing.SystemColors.Control;
             this.txtCustomerPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCustomerPhone.Enabled = false;
             this.txtCustomerPhone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -110,7 +112,6 @@
             // 
             // txtCustomerAddress2
             // 
-            this.txtCustomerAddress2.BackColor = System.Drawing.SystemColors.Control;
             this.txtCustomerAddress2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCustomerAddress2.Enabled = false;
             this.txtCustomerAddress2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,7 +123,6 @@
             // 
             // txtCustomerAddress1
             // 
-            this.txtCustomerAddress1.BackColor = System.Drawing.SystemColors.Control;
             this.txtCustomerAddress1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCustomerAddress1.Enabled = false;
             this.txtCustomerAddress1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,7 +134,6 @@
             // 
             // txtCustomerName
             // 
-            this.txtCustomerName.BackColor = System.Drawing.SystemColors.Control;
             this.txtCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCustomerName.Enabled = false;
             this.txtCustomerName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,6 +156,7 @@
             this.btnCustomerDelete.TabIndex = 34;
             this.btnCustomerDelete.Text = "Delete";
             this.btnCustomerDelete.UseVisualStyleBackColor = false;
+            this.btnCustomerDelete.Click += new System.EventHandler(this.btnCustomerDelete_Click_1);
             // 
             // btnCustomerUpdate
             // 
@@ -171,6 +171,7 @@
             this.btnCustomerUpdate.TabIndex = 33;
             this.btnCustomerUpdate.Text = "Update";
             this.btnCustomerUpdate.UseVisualStyleBackColor = false;
+            this.btnCustomerUpdate.Click += new System.EventHandler(this.btnCustomerUpdate_Click);
             // 
             // btnCustomerInsert
             // 
@@ -185,10 +186,12 @@
             this.btnCustomerInsert.TabIndex = 32;
             this.btnCustomerInsert.Text = "Insert";
             this.btnCustomerInsert.UseVisualStyleBackColor = false;
+            this.btnCustomerInsert.Click += new System.EventHandler(this.btnCustomerInsert_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
             this.label8.Location = new System.Drawing.Point(30, 362);
@@ -200,6 +203,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
             this.label7.Location = new System.Drawing.Point(30, 327);
@@ -211,6 +215,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
             this.label6.Location = new System.Drawing.Point(30, 292);
@@ -222,6 +227,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
             this.label5.Location = new System.Drawing.Point(30, 257);
@@ -233,6 +239,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
             this.label4.Location = new System.Drawing.Point(30, 222);
@@ -244,6 +251,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
             this.label3.Location = new System.Drawing.Point(30, 187);
@@ -255,6 +263,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
             this.label9.Location = new System.Drawing.Point(30, 152);
@@ -266,10 +275,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.label10.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.label10.Location = new System.Drawing.Point(118, 35);
+            this.label10.Location = new System.Drawing.Point(117, 23);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(605, 78);
             this.label10.TabIndex = 24;
@@ -277,6 +286,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.pictureBox1.Image = global::wfaProjetoIntegrador.Properties.Resources.blueCustomer;
             this.pictureBox1.Location = new System.Drawing.Point(-34, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -285,11 +295,25 @@
             this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1086, 583);
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
+            // 
             // CustomerUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvCustomer);
@@ -310,11 +334,15 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.pictureBox2);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "CustomerUser";
-            this.Size = new System.Drawing.Size(1080, 573);
+            this.Size = new System.Drawing.Size(1086, 565);
+            this.Load += new System.EventHandler(this.CustomerUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,5 +370,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

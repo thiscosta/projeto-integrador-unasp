@@ -44,14 +44,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnPowerOff = new System.Windows.Forms.Button();
+            this.npgsqlCommandBuilder1 = new Npgsql.NpgsqlCommandBuilder();
+            this.reportsUser1 = new wfaProjetoIntegrador.Views.ReportsUser();
             this.BillUser1 = new wfaProjetoIntegrador.Views.BillUser();
             this.SalesUser1 = new wfaProjetoIntegrador.Views.SalesUser();
             this.ServicesUser1 = new wfaProjetoIntegrador.Views.ServicesUser();
             this.ProductsUser1 = new wfaProjetoIntegrador.Views.ProductsUser();
             this.CustomerUserDB = new wfaProjetoIntegrador.Views.CustomerUser();
             this.HomeUser1 = new wfaProjetoIntegrador.Views.HomeUser();
-            this.npgsqlCommandBuilder1 = new Npgsql.NpgsqlCommandBuilder();
-            this.reportsUser1 = new wfaProjetoIntegrador.Views.ReportsUser();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -199,6 +199,16 @@
             this.btnPowerOff.UseVisualStyleBackColor = false;
             this.btnPowerOff.Click += new System.EventHandler(this.btnPowerOff_Click);
             // 
+            // npgsqlCommandBuilder1
+            // 
+            this.npgsqlCommandBuilder1.QuotePrefix = "\"";
+            this.npgsqlCommandBuilder1.QuoteSuffix = "\"";
+            // 
+            // reportsUser1
+            // 
+            resources.ApplyResources(this.reportsUser1, "reportsUser1");
+            this.reportsUser1.Name = "reportsUser1";
+            // 
             // BillUser1
             // 
             this.BillUser1.BackColor = System.Drawing.SystemColors.Control;
@@ -233,18 +243,9 @@
             // 
             // HomeUser1
             // 
+            this.HomeUser1.BackColor = System.Drawing.SystemColors.Control;
             resources.ApplyResources(this.HomeUser1, "HomeUser1");
             this.HomeUser1.Name = "HomeUser1";
-            // 
-            // npgsqlCommandBuilder1
-            // 
-            this.npgsqlCommandBuilder1.QuotePrefix = "\"";
-            this.npgsqlCommandBuilder1.QuoteSuffix = "\"";
-            // 
-            // reportsUser1
-            // 
-            resources.ApplyResources(this.reportsUser1, "reportsUser1");
-            this.reportsUser1.Name = "reportsUser1";
             // 
             // MenuHome
             // 

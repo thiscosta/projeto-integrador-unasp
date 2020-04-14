@@ -40,8 +40,6 @@ namespace wfaProjetoIntegrador.Views
         private void btnInsertBill_Click(object sender, EventArgs e)
         {
             ReportsController.List(dataGridView1);
-
-            
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -104,6 +102,11 @@ namespace wfaProjetoIntegrador.Views
 
             // Abrindo o .PDF para ver como ficou!
             System.Diagnostics.Process.Start(filename);
+
+        }
+
+        private void ReportsUser_Load(object sender, EventArgs e)
+        {
 
         }
     }

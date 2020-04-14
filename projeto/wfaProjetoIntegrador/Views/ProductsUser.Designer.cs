@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtDueDate = new System.Windows.Forms.TextBox();
             this.txtProductBarcode = new System.Windows.Forms.Label();
             this.txtProductHub = new System.Windows.Forms.TextBox();
             this.txtProductSalesPrice = new System.Windows.Forms.TextBox();
@@ -38,10 +39,10 @@
             this.txtProductsCategory = new System.Windows.Forms.TextBox();
             this.txtProductCompany = new System.Windows.Forms.TextBox();
             this.txtProductName = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnProductDelete = new System.Windows.Forms.Button();
+            this.btnProductUpdate = new System.Windows.Forms.Button();
             this.txtProductDueDate = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnProductInsert = new System.Windows.Forms.Button();
             this.lbl5 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
@@ -50,8 +51,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lbl6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -74,17 +77,17 @@
             this.dgvProduct.Size = new System.Drawing.Size(483, 409);
             this.dgvProduct.TabIndex = 44;
             // 
-            // textBox8
+            // txtDueDate
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Enabled = false;
-            this.textBox8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.White;
-            this.textBox8.Location = new System.Drawing.Point(130, 391);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(441, 23);
-            this.textBox8.TabIndex = 41;
+            this.txtDueDate.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDueDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDueDate.Enabled = false;
+            this.txtDueDate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDueDate.ForeColor = System.Drawing.Color.White;
+            this.txtDueDate.Location = new System.Drawing.Point(130, 391);
+            this.txtDueDate.Name = "txtDueDate";
+            this.txtDueDate.Size = new System.Drawing.Size(441, 23);
+            this.txtDueDate.TabIndex = 41;
             // 
             // txtProductBarcode
             // 
@@ -95,7 +98,7 @@
             this.txtProductBarcode.ForeColor = System.Drawing.Color.White;
             this.txtProductBarcode.Location = new System.Drawing.Point(130, 356);
             this.txtProductBarcode.Name = "txtProductBarcode";
-            this.txtProductBarcode.Size = new System.Drawing.Size(441, 13);
+            this.txtProductBarcode.Size = new System.Drawing.Size(441, 16);
             this.txtProductBarcode.TabIndex = 40;
             // 
             // txtProductHub
@@ -170,33 +173,33 @@
             this.txtProductName.Size = new System.Drawing.Size(441, 23);
             this.txtProductName.TabIndex = 43;
             // 
-            // button1
+            // btnProductDelete
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(395, 448);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 106);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnProductDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.btnProductDelete.FlatAppearance.BorderSize = 0;
+            this.btnProductDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductDelete.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnProductDelete.Location = new System.Drawing.Point(395, 448);
+            this.btnProductDelete.Name = "btnProductDelete";
+            this.btnProductDelete.Size = new System.Drawing.Size(175, 106);
+            this.btnProductDelete.TabIndex = 33;
+            this.btnProductDelete.Text = "Delete";
+            this.btnProductDelete.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnProductUpdate
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(214, 448);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 106);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnProductUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.btnProductUpdate.FlatAppearance.BorderSize = 0;
+            this.btnProductUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnProductUpdate.Location = new System.Drawing.Point(214, 448);
+            this.btnProductUpdate.Name = "btnProductUpdate";
+            this.btnProductUpdate.Size = new System.Drawing.Size(175, 106);
+            this.btnProductUpdate.TabIndex = 34;
+            this.btnProductUpdate.Text = "Update";
+            this.btnProductUpdate.UseVisualStyleBackColor = false;
             // 
             // txtProductDueDate
             // 
@@ -209,19 +212,19 @@
             this.txtProductDueDate.TabIndex = 30;
             this.txtProductDueDate.Text = "Due Date:";
             // 
-            // button3
+            // btnProductInsert
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(33, 448);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 106);
-            this.button3.TabIndex = 35;
-            this.button3.Text = "Insert";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnProductInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.btnProductInsert.FlatAppearance.BorderSize = 0;
+            this.btnProductInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductInsert.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductInsert.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnProductInsert.Location = new System.Drawing.Point(33, 448);
+            this.btnProductInsert.Name = "btnProductInsert";
+            this.btnProductInsert.Size = new System.Drawing.Size(175, 106);
+            this.btnProductInsert.TabIndex = 35;
+            this.btnProductInsert.Text = "Insert";
+            this.btnProductInsert.UseVisualStyleBackColor = false;
             // 
             // lbl5
             // 
@@ -310,6 +313,10 @@
             this.pictureBox1.TabIndex = 45;
             this.pictureBox1.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // ProductsUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,7 +325,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvProduct);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtDueDate);
             this.Controls.Add(this.txtProductBarcode);
             this.Controls.Add(this.txtProductHub);
             this.Controls.Add(this.txtProductSalesPrice);
@@ -326,10 +333,10 @@
             this.Controls.Add(this.txtProductsCategory);
             this.Controls.Add(this.txtProductCompany);
             this.Controls.Add(this.txtProductName);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnProductDelete);
+            this.Controls.Add(this.btnProductUpdate);
             this.Controls.Add(this.txtProductDueDate);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnProductInsert);
             this.Controls.Add(this.lbl6);
             this.Controls.Add(this.lbl5);
             this.Controls.Add(this.lbl4);
@@ -341,6 +348,7 @@
             this.Size = new System.Drawing.Size(1080, 573);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,17 +358,17 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvProduct;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtDueDate;
         private System.Windows.Forms.TextBox txtProductHub;
         private System.Windows.Forms.TextBox txtProductSalesPrice;
         private System.Windows.Forms.TextBox txtProductPurchasePrice;
         private System.Windows.Forms.TextBox txtProductsCategory;
         private System.Windows.Forms.TextBox txtProductCompany;
         private System.Windows.Forms.TextBox txtProductName;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnProductDelete;
+        private System.Windows.Forms.Button btnProductUpdate;
         private System.Windows.Forms.Label txtProductDueDate;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnProductInsert;
         private System.Windows.Forms.Label txtProductBarcode;
         private System.Windows.Forms.Label lbl5;
         private System.Windows.Forms.Label lbl4;
@@ -369,5 +377,6 @@
         private System.Windows.Forms.Label lblProductCompany;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbl6;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

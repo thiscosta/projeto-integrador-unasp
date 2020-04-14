@@ -171,7 +171,6 @@
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\SalesUserController.cs" />
     <Compile Include="Controllers\ServicesUserController.cs" />
-    <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\SaleItem.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -180,7 +179,6 @@
     <Compile Include="Models\Sale.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\Users.cs" />
-    <Compile Include="Repository\AddressRepository.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
     <Compile Include="Repository\ParcelRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />

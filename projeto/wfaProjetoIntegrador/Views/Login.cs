@@ -14,7 +14,7 @@ namespace wfaProjetoIntegrador.Views
         {
             InitializeComponent(); //Não mexe nessa classe
             txtUser.Focus();
-
+            /*
             UserRepository repo = new UserRepository();
             List<Users> lista = repo.getAll();
             bool created = repo.create(new Users
@@ -40,7 +40,7 @@ namespace wfaProjetoIntegrador.Views
             List<Users> users = repo.queryBy(new Dictionary<string, dynamic> {
                 { "email", "teste@email.com" }
             });
-            bool deleted = repo.delete(8);
+            bool deleted = repo.delete(8);*/
         }
         
         private void btnLogin_Click(object sender, EventArgs e)
