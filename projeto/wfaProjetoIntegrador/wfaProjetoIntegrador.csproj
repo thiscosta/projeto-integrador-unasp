@@ -162,25 +162,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\Connection.cs" />
-    <Compile Include="Controllers\BillsUserController.cs" />
     <Compile Include="Controllers\CustomerUserController.cs" />
-    <Compile Include="Controllers\HomeUserController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\ProductsUserController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\SalesUserController.cs" />
     <Compile Include="Controllers\ServicesUserController.cs" />
-    <Compile Include="Models\Model.cs" />
     <Compile Include="Models\SaleItem.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Parcel.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Sale.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
-    <Compile Include="Repository\ParcelRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\SaleRepository.cs" />
     <Compile Include="Repository\SaleItemRepository.cs" />
@@ -188,12 +182,6 @@
     <Compile Include="Repository\ServiceRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
-    <Compile Include="Views\BillsUser.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\BillsUser.Designer.cs">
-      <DependentUpon>BillsUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\CustomerUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -244,9 +232,6 @@
     <Compile Include="Views\ServicesUser.Designer.cs">
       <DependentUpon>ServicesUser.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\BillsUser.resx">
-      <DependentUpon>BillsUser.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomerUser.resx">
       <DependentUpon>CustomerUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,8 +346,6 @@
   <ItemGroup>
     <None Include="Resources\loginScreen.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utils\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,20 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label9 = new System.Windows.Forms.Label();
             this.dgvService = new System.Windows.Forms.DataGridView();
-            this.txtServicePrice = new System.Windows.Forms.TextBox();
             this.txtServiceDescription = new System.Windows.Forms.TextBox();
-            this.txtServiceId = new System.Windows.Forms.TextBox();
             this.btnServiceDelete = new System.Windows.Forms.Button();
             this.btnServiceUpdate = new System.Windows.Forms.Button();
             this.btnServiceInsert = new System.Windows.Forms.Button();
-            this.lbl2 = new System.Windows.Forms.Label();
             this.lblProductCompany = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchClient = new System.Windows.Forms.Button();
+            this.txtClientId = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.searchProduct = new System.Windows.Forms.Button();
+            this.txtProductId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -63,42 +68,19 @@
             this.dgvService.Name = "dgvService";
             this.dgvService.Size = new System.Drawing.Size(483, 409);
             this.dgvService.TabIndex = 66;
-            // 
-            // txtServicePrice
-            // 
-            this.txtServicePrice.BackColor = System.Drawing.SystemColors.Control;
-            this.txtServicePrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtServicePrice.Enabled = false;
-            this.txtServicePrice.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServicePrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.txtServicePrice.Location = new System.Drawing.Point(130, 227);
-            this.txtServicePrice.Name = "txtServicePrice";
-            this.txtServicePrice.Size = new System.Drawing.Size(441, 23);
-            this.txtServicePrice.TabIndex = 64;
+            this.dgvService.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvService_CellContentClick);
             // 
             // txtServiceDescription
             // 
-            this.txtServiceDescription.BackColor = System.Drawing.SystemColors.Control;
+            this.txtServiceDescription.BackColor = System.Drawing.SystemColors.Window;
             this.txtServiceDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtServiceDescription.Enabled = false;
             this.txtServiceDescription.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtServiceDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.txtServiceDescription.Location = new System.Drawing.Point(130, 192);
+            this.txtServiceDescription.Location = new System.Drawing.Point(131, 229);
             this.txtServiceDescription.Name = "txtServiceDescription";
             this.txtServiceDescription.Size = new System.Drawing.Size(441, 23);
             this.txtServiceDescription.TabIndex = 58;
-            // 
-            // txtServiceId
-            // 
-            this.txtServiceId.BackColor = System.Drawing.SystemColors.Control;
-            this.txtServiceId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtServiceId.Enabled = false;
-            this.txtServiceId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServiceId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.txtServiceId.Location = new System.Drawing.Point(130, 157);
-            this.txtServiceId.Name = "txtServiceId";
-            this.txtServiceId.Size = new System.Drawing.Size(441, 23);
-            this.txtServiceId.TabIndex = 65;
             // 
             // btnServiceDelete
             // 
@@ -107,12 +89,13 @@
             this.btnServiceDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServiceDelete.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServiceDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnServiceDelete.Location = new System.Drawing.Point(396, 270);
+            this.btnServiceDelete.Location = new System.Drawing.Point(398, 273);
             this.btnServiceDelete.Name = "btnServiceDelete";
             this.btnServiceDelete.Size = new System.Drawing.Size(175, 106);
             this.btnServiceDelete.TabIndex = 55;
             this.btnServiceDelete.Text = "Delete";
             this.btnServiceDelete.UseVisualStyleBackColor = false;
+            this.btnServiceDelete.Click += new System.EventHandler(this.btnServiceDelete_Click);
             // 
             // btnServiceUpdate
             // 
@@ -121,12 +104,13 @@
             this.btnServiceUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServiceUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServiceUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnServiceUpdate.Location = new System.Drawing.Point(215, 270);
+            this.btnServiceUpdate.Location = new System.Drawing.Point(217, 273);
             this.btnServiceUpdate.Name = "btnServiceUpdate";
             this.btnServiceUpdate.Size = new System.Drawing.Size(175, 106);
             this.btnServiceUpdate.TabIndex = 56;
             this.btnServiceUpdate.Text = "Update";
             this.btnServiceUpdate.UseVisualStyleBackColor = false;
+            this.btnServiceUpdate.Click += new System.EventHandler(this.btnServiceUpdate_Click);
             // 
             // btnServiceInsert
             // 
@@ -135,45 +119,24 @@
             this.btnServiceInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServiceInsert.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServiceInsert.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnServiceInsert.Location = new System.Drawing.Point(34, 270);
+            this.btnServiceInsert.Location = new System.Drawing.Point(36, 273);
             this.btnServiceInsert.Name = "btnServiceInsert";
             this.btnServiceInsert.Size = new System.Drawing.Size(175, 106);
             this.btnServiceInsert.TabIndex = 57;
             this.btnServiceInsert.Text = "Insert";
             this.btnServiceInsert.UseVisualStyleBackColor = false;
-            // 
-            // lbl2
-            // 
-            this.lbl2.AutoSize = true;
-            this.lbl2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.lbl2.Location = new System.Drawing.Point(30, 227);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(43, 17);
-            this.lbl2.TabIndex = 47;
-            this.lbl2.Text = "Price:";
+            this.btnServiceInsert.Click += new System.EventHandler(this.btnServiceInsert_Click);
             // 
             // lblProductCompany
             // 
             this.lblProductCompany.AutoSize = true;
             this.lblProductCompany.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.lblProductCompany.Location = new System.Drawing.Point(30, 191);
+            this.lblProductCompany.Location = new System.Drawing.Point(31, 228);
             this.lblProductCompany.Name = "lblProductCompany";
             this.lblProductCompany.Size = new System.Drawing.Size(84, 17);
             this.lblProductCompany.TabIndex = 53;
             this.lblProductCompany.Text = "Description:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.label10.Location = new System.Drawing.Point(30, 157);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 17);
-            this.label10.TabIndex = 54;
-            this.label10.Text = "Id Service:";
             // 
             // pictureBox1
             // 
@@ -185,27 +148,111 @@
             this.pictureBox1.TabIndex = 67;
             this.pictureBox1.TabStop = false;
             // 
+            // searchClient
+            // 
+            this.searchClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.searchClient.Enabled = false;
+            this.searchClient.FlatAppearance.BorderSize = 0;
+            this.searchClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchClient.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.searchClient.Location = new System.Drawing.Point(131, 153);
+            this.searchClient.Name = "searchClient";
+            this.searchClient.Size = new System.Drawing.Size(33, 23);
+            this.searchClient.TabIndex = 78;
+            this.searchClient.Text = "...";
+            this.searchClient.UseVisualStyleBackColor = false;
+            // 
+            // txtClientId
+            // 
+            this.txtClientId.BackColor = System.Drawing.SystemColors.Window;
+            this.txtClientId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtClientId.Enabled = false;
+            this.txtClientId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.txtClientId.Location = new System.Drawing.Point(170, 154);
+            this.txtClientId.Name = "txtClientId";
+            this.txtClientId.Size = new System.Drawing.Size(402, 23);
+            this.txtClientId.TabIndex = 77;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.label10.Location = new System.Drawing.Point(31, 154);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 17);
+            this.label10.TabIndex = 76;
+            this.label10.Text = "Client:";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // searchProduct
+            // 
+            this.searchProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.searchProduct.Enabled = false;
+            this.searchProduct.FlatAppearance.BorderSize = 0;
+            this.searchProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchProduct.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchProduct.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.searchProduct.Location = new System.Drawing.Point(132, 191);
+            this.searchProduct.Name = "searchProduct";
+            this.searchProduct.Size = new System.Drawing.Size(33, 23);
+            this.searchProduct.TabIndex = 81;
+            this.searchProduct.Text = "...";
+            this.searchProduct.UseVisualStyleBackColor = false;
+            // 
+            // txtProductId
+            // 
+            this.txtProductId.BackColor = System.Drawing.SystemColors.Window;
+            this.txtProductId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProductId.Enabled = false;
+            this.txtProductId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.txtProductId.Location = new System.Drawing.Point(171, 192);
+            this.txtProductId.Name = "txtProductId";
+            this.txtProductId.Size = new System.Drawing.Size(402, 23);
+            this.txtProductId.TabIndex = 80;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
+            this.label1.Location = new System.Drawing.Point(32, 192);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "Product:";
+            // 
             // ServicesUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.searchProduct);
+            this.Controls.Add(this.txtProductId);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.searchClient);
+            this.Controls.Add(this.txtClientId);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvService);
-            this.Controls.Add(this.txtServicePrice);
             this.Controls.Add(this.txtServiceDescription);
-            this.Controls.Add(this.txtServiceId);
             this.Controls.Add(this.btnServiceDelete);
             this.Controls.Add(this.btnServiceUpdate);
             this.Controls.Add(this.btnServiceInsert);
-            this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lblProductCompany);
-            this.Controls.Add(this.label10);
             this.Name = "ServicesUser";
             this.Size = new System.Drawing.Size(1080, 573);
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,14 +263,17 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvService;
-        private System.Windows.Forms.TextBox txtServicePrice;
         private System.Windows.Forms.TextBox txtServiceDescription;
-        private System.Windows.Forms.TextBox txtServiceId;
         private System.Windows.Forms.Button btnServiceDelete;
         private System.Windows.Forms.Button btnServiceUpdate;
         private System.Windows.Forms.Button btnServiceInsert;
-        private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lblProductCompany;
+        private System.Windows.Forms.Button searchClient;
+        private System.Windows.Forms.TextBox txtClientId;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button searchProduct;
+        private System.Windows.Forms.TextBox txtProductId;
+        private System.Windows.Forms.Label label1;
     }
 }

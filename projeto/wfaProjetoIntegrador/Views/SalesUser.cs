@@ -21,5 +21,10 @@ namespace wfaProjetoIntegrador.Views
         {
 
         }
+
+        private void dgvSales_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

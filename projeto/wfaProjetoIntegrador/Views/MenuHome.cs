@@ -70,20 +70,7 @@ namespace wfaProjetoIntegrador.Views
             SalesUser1.BringToFront();
             btnPowerOff.BringToFront();
         }
-
-        private void btnBills_Click(object sender, EventArgs e)
-        {
-            sidePanel.Height = btnBills.Height;
-            sidePanel.Top = btnBills.Top;
-            BillUser1.BringToFront();
-            btnPowerOff.BringToFront();
-        }
-
-        private void BillUser1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             sidePanel.Height = btnReports.Height;

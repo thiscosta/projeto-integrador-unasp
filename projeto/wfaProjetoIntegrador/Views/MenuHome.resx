@@ -132,7 +132,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnReports.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 423</value>
+    <value>23, 366</value>
   </data>
   <data name="btnReports.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 51</value>
@@ -213,45 +213,6 @@
   <data name="&gt;&gt;sidePanel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="btnBills.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnBills.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Century Gothic, 11.25pt</value>
-  </data>
-  <data name="btnBills.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnBills.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnBills.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 366</value>
-  </data>
-  <data name="btnBills.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 51</value>
-  </data>
-  <data name="btnBills.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnBills.Text" xml:space="preserve">
-    <value>            Bills</value>
-  </data>
-  <data name="btnBills.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;btnBills.Name" xml:space="preserve">
-    <value>btnBills</value>
-  </data>
-  <data name="&gt;&gt;btnBills.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnBills.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btnBills.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="btnSales.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -289,7 +250,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnSales.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="btnServices.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -328,7 +289,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnServices.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="btnProducts.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -367,7 +328,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnProducts.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="btnHome.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -406,7 +367,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnHome.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="btnCustomers.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -445,7 +406,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnCustomers.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -600,30 +561,6 @@
   <data name="&gt;&gt;btnPowerOff.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="BillUser1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 21</value>
-  </data>
-  <data name="BillUser1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 6, 6, 6</value>
-  </data>
-  <data name="BillUser1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1080, 573</value>
-  </data>
-  <data name="BillUser1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;BillUser1.Name" xml:space="preserve">
-    <value>BillUser1</value>
-  </data>
-  <data name="&gt;&gt;BillUser1.Type" xml:space="preserve">
-    <value>wfaProjetoIntegrador.Views.BillUser, wfaProjetoIntegrador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BillUser1.Parent" xml:space="preserve">
-    <value>panel5</value>
-  </data>
-  <data name="&gt;&gt;BillUser1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="SalesUser1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, -3</value>
   </data>
@@ -646,7 +583,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;SalesUser1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="ServicesUser1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -670,7 +607,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;ServicesUser1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="ProductsUser1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, -3</value>
@@ -694,7 +631,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;ProductsUser1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="CustomerUserDB.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -718,7 +655,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;CustomerUserDB.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="HomeUser1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -742,7 +679,7 @@
     <value>panel5</value>
   </data>
   <data name="&gt;&gt;HomeUser1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="panel5.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -782,9 +719,6 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1262, 552</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>1280, 720</value>

@@ -15,8 +15,9 @@ namespace wfaProjetoIntegrador.Repository
             return new Service
             {
                 id = int.Parse(record["id"].ToString()),
-                description = record["description"].ToString(),
-                price = Double.Parse(record["price"].ToString())
+                clientId = int.Parse(record["clientId"].ToString()),
+                productId = int.Parse(record["productId"].ToString()),
+                description = record["description"].ToString()
             };
         }
     }

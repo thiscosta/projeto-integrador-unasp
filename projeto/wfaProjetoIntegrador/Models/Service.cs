@@ -9,7 +9,8 @@ namespace wfaProjetoIntegrador.Models
     class Service
     {
         public int id { get; set; }
+        public int clientId { get; set; }
+        public int productId { get; set; }
         public String description { get; set; }
-        public Double price { get; set; }
     }
 }

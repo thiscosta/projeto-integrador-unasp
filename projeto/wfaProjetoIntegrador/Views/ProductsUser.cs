@@ -28,88 +28,22 @@ namespace wfaProjetoIntegrador.Views
                 txtProductsCategory,
                 txtProductPurchasePrice,
                 txtProductSalesPrice,
-                txtProductHub,
-                txtDueDate
+                txtProductHub
             };
             prod = new Product();
             ProductsUserController.list(dgvProduct);
         }
-
-        private void ProductUser_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnProductInsert_Click(object sender, EventArgs e)
-        {
-            if (saving)
-            {
-                if (validateFields())
-                    return;
-
-                setProduct();
-                ProductsUserController.insert(prod);
-                ProductsUserController.list(dgvProduct);
-                saving = false;
-
-                btnProductInsert.Text = "Insert";
-                disableFields();
-            }
-            else
-            {
-                saving = true;
-
-                eraseFields();
-                enableFields();
-
-                btnProductInsert.Text = "Save";
-            }
-        }
-
+        
         private void setProduct()
         {
             prod.name = txtProductName.Text;
-            prod.address1 = txtProductAddress1.Text;
-            prod.address2 = txtProductAddress2.Text;
-            prod.phone = txtProductPhone.Text;
-            prod.cpf = txtProductCpf.Text;
-            prod.birthdate = DateTime.Parse(txtProductBirthday.Text);
-            prod.email = txtProductEmail.Text;
+            prod.sellPrice = Double.Parse(txtProductSalesPrice.Text);
+            prod.company = txtProductCompany.Text;
+            prod.quantity = Int32.Parse(txtProductHub.Text);
+            prod.category = txtProductsCategory.Text;
+            prod.buyprice = Double.Parse(txtProductPurchasePrice.Text);
         }
 
-        private void btnProductUpdate_Click(object sender, EventArgs e)
-        {
-            if (saving)
-            {
-                if (validateFields())
-                    return;
-
-                if (customValidateFields())
-                    return;
-
-                setProduct();
-                ProductsUserController.update(prod);
-                ProductsUserController.list(dgvProduct);
-                saving = false;
-
-                btnProductUpdate.Text = "Update";
-                disableFields();
-            }
-            else
-            {
-                if (prod.id == 0)
-                {
-                    MessageBox.Show("Choose a record to update", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                saving = true;
-
-                enableFields();
-
-                btnProductUpdate.Text = "Save";
-            }
-        }
         private void enableFields()
         {
             foreach (TextBox field in TextBoxes)
@@ -145,11 +79,7 @@ namespace wfaProjetoIntegrador.Views
         {
             bool hasError = false;
             setErrorsFalse();
-            if (!Regex.Match(txtProductBirthday.Text, @"^([0]?[0-9]|[12][0-9]|[3][01])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})$").Success)
-            {
-                errorProvider1.SetError(txtProductBirthday, "Invalid value (dd/mm/yyyy)");
-                hasError = true;
-            }
+           
 
             return hasError;
         }
@@ -165,6 +95,105 @@ namespace wfaProjetoIntegrador.Views
 
         private void btnProductDelete_Click_1(object sender, EventArgs e)
         {
+        }
+        
+        private void fillFields()
+        {
+            txtProductName.Text = prod.name;
+            txtProductSalesPrice.Text = prod.sellPrice.ToString();
+            txtProductCompany.Text = prod.company;
+            txtProductHub.Text = prod.quantity.ToString();
+            txtProductsCategory.Text = prod.category;
+            txtProductPurchasePrice.Text = prod.buyprice.ToString();
+        }
+
+        private void eraseFields()
+        {
+            foreach (TextBox field in TextBoxes)
+            {
+                field.Text = "";
+            }
+        }
+
+        private void btnProductInsert_Click(object sender, EventArgs e)
+        {
+            if (saving)
+            {
+                if (validateFields())
+                    return;
+
+                setProduct();
+                ProductsUserController.insert(prod);
+                ProductsUserController.list(dgvProduct);
+                saving = false;
+
+                btnProductInsert.Text = "Insert";
+                disableFields();
+            }
+            else
+            {
+                saving = true;
+
+                eraseFields();
+                enableFields();
+
+                btnProductInsert.Text = "Save";
+            }
+
+        }
+
+        private void btnProductUpdate_Click(object sender, EventArgs e)
+        {
+            if (saving)
+            {
+                if (validateFields())
+                    return;
+
+                if (customValidateFields())
+                    return;
+
+                setProduct();
+                ProductsUserController.update(prod);
+                ProductsUserController.list(dgvProduct);
+                saving = false;
+
+                btnProductUpdate.Text = "Update";
+                disableFields();
+            }
+            else
+            {
+                if (prod.id == 0)
+                {
+                    MessageBox.Show("Choose a record to update", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                saving = true;
+
+                enableFields();
+
+                btnProductUpdate.Text = "Save";
+            }
+        }
+
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Int32 catchRowIndex = dgvProduct.SelectedCells[0].RowIndex;
+            foreach (DataGridViewRow row in dgvProduct.SelectedRows)
+            {
+                prod.id = Int32.Parse(row.Cells[0].Value.ToString());
+                prod.name = row.Cells[1].Value.ToString();
+                prod.sellPrice = Double.Parse(row.Cells[2].Value.ToString());
+                prod.company = row.Cells[3].Value.ToString();
+                prod.quantity = Int32.Parse(row.Cells[4].Value.ToString());
+                prod.buyprice = Double.Parse(row.Cells[5].Value.ToString());
+            }
+
+            fillFields();
+        }
+
+        private void btnProductDelete_Click(object sender, EventArgs e)
+        {
             if (prod.id == 0)
             {
                 MessageBox.Show("Choose a record to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -178,43 +207,7 @@ namespace wfaProjetoIntegrador.Views
                 ProductsUserController.list(dgvProduct);
                 eraseFields();
             }
-        }
 
-        private void dgvProduct_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Int32 catchRowIndex = dgvProduct.SelectedCells[0].RowIndex;
-            foreach (DataGridViewRow row in dgvProduct.SelectedRows)
-            {
-                prod.id = Int32.Parse(row.Cells[0].Value.ToString());
-                prod.cpf = row.Cells[1].Value.ToString();
-                prod.name = row.Cells[2].Value.ToString();
-                prod.phone = row.Cells[3].Value.ToString();
-                prod.birthdate = DateTime.Parse(row.Cells[4].Value.ToString());
-                prod.email = row.Cells[5].Value.ToString();
-                prod.address1 = row.Cells[6].Value.ToString();
-                prod.address2 = row.Cells[7].Value.ToString();
-            }
-
-            fillFields();
-        }
-
-        private void fillFields()
-        {
-            txtProductName.Text = prod.name;
-            txtProductAddress1.Text = prod.address1;
-            txtProductAddress2.Text = prod.address2;
-            txtProductPhone.Text = prod.phone;
-            txtProductCpf.Text = prod.cpf;
-            txtProductBirthday.Text = prod.birthdate.ToString();
-            txtProductEmail.Text = prod.email;
-        }
-
-        private void eraseFields()
-        {
-            foreach (TextBox field in TextBoxes)
-            {
-                field.Text = "";
-            }
         }
     }
 }
