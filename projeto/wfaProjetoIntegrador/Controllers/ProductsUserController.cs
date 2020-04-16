@@ -18,10 +18,19 @@ namespace wfaProjetoIntegrador.Controllers
             List<Product> list = repo.getAll();
             objetoResposta.DataSource = list;
         }
+        public static List<Product> listAll()
+        {
+            return repo.getAll();
+        }
 
         public static void insert(Product prod)
         {
             repo.create(prod);
+        }
+
+        public static Product find(int id)
+        {
+            return repo.find(id);
         }
 
         public static void update(Product prod)

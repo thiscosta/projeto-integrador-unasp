@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace wfaProjetoIntegrador.Repository
 {
-    abstract class BaseRepository<T, K> : Repository<T, K>
+    public abstract class BaseRepository<T, K> : Repository<T, K>
     {
         String tableName;
         public BaseRepository()

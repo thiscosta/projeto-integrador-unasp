@@ -167,8 +167,10 @@
     <Compile Include="Controllers\ProductsUserController.cs" />
     <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\SalesUserController.cs" />
+    <Compile Include="Controllers\SearchFormImplementation.cs" />
+    <Compile Include="Controllers\SearchFormInterface.cs" />
+    <Compile Include="Controllers\SearchFormInterface2.cs" />
     <Compile Include="Controllers\ServicesUserController.cs" />
-    <Compile Include="Models\SaleItem.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Sale.cs" />
@@ -177,7 +179,6 @@
     <Compile Include="Repository\BaseRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\SaleRepository.cs" />
-    <Compile Include="Repository\SaleItemRepository.cs" />
     <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\ServiceRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
@@ -193,6 +194,12 @@
     </Compile>
     <Compile Include="Views\HomeUser.Designer.cs">
       <DependentUpon>HomeUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
@@ -237,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\HomeUser.resx">
       <DependentUpon>HomeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

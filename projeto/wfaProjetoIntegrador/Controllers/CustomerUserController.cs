@@ -9,7 +9,7 @@ using wfaProjetoIntegrador.Repository;
 
 namespace wfaProjetoIntegrador.Controllers
 {
-    class CustomerUserController
+    public class CustomerUserController
     {
         private static CustomerRepository repo = new CustomerRepository();
 
@@ -17,6 +17,15 @@ namespace wfaProjetoIntegrador.Controllers
         {
             List<Customer> list = repo.getAll();
             objetoResposta.DataSource = list;
+        }
+        public static List<Customer> listAll()
+        {
+            return repo.getAll();
+        }
+
+        public static Customer find(int id)
+        {
+            return repo.find(id);
         }
 
         public static void insert(Customer customer)

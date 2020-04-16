@@ -36,17 +36,14 @@
             this.btnServiceUpdate = new System.Windows.Forms.Button();
             this.btnServiceInsert = new System.Windows.Forms.Button();
             this.lblProductCompany = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.searchClient = new System.Windows.Forms.Button();
-            this.txtClientId = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.searchProduct = new System.Windows.Forms.Button();
             this.txtProductId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -138,54 +135,6 @@
             this.lblProductCompany.TabIndex = 53;
             this.lblProductCompany.Text = "Description:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::wfaProjetoIntegrador.Properties.Resources.blueServices;
-            this.pictureBox1.Location = new System.Drawing.Point(-62, -8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(254, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 67;
-            this.pictureBox1.TabStop = false;
-            // 
-            // searchClient
-            // 
-            this.searchClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.searchClient.Enabled = false;
-            this.searchClient.FlatAppearance.BorderSize = 0;
-            this.searchClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchClient.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.searchClient.Location = new System.Drawing.Point(131, 153);
-            this.searchClient.Name = "searchClient";
-            this.searchClient.Size = new System.Drawing.Size(33, 23);
-            this.searchClient.TabIndex = 78;
-            this.searchClient.Text = "...";
-            this.searchClient.UseVisualStyleBackColor = false;
-            // 
-            // txtClientId
-            // 
-            this.txtClientId.BackColor = System.Drawing.SystemColors.Window;
-            this.txtClientId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtClientId.Enabled = false;
-            this.txtClientId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.txtClientId.Location = new System.Drawing.Point(170, 154);
-            this.txtClientId.Name = "txtClientId";
-            this.txtClientId.Size = new System.Drawing.Size(402, 23);
-            this.txtClientId.TabIndex = 77;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.label10.Location = new System.Drawing.Point(31, 154);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 17);
-            this.label10.TabIndex = 76;
-            this.label10.Text = "Client:";
-            // 
             // errorProvider1
             // 
             this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
@@ -205,6 +154,7 @@
             this.searchProduct.TabIndex = 81;
             this.searchProduct.Text = "...";
             this.searchProduct.UseVisualStyleBackColor = false;
+            this.searchProduct.Click += new System.EventHandler(this.searchProduct_Click);
             // 
             // txtProductId
             // 
@@ -229,6 +179,16 @@
             this.label1.TabIndex = 79;
             this.label1.Text = "Product:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::wfaProjetoIntegrador.Properties.Resources.blueServices;
+            this.pictureBox1.Location = new System.Drawing.Point(-62, -8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(254, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 67;
+            this.pictureBox1.TabStop = false;
+            // 
             // ServicesUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,9 +197,6 @@
             this.Controls.Add(this.searchProduct);
             this.Controls.Add(this.txtProductId);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.searchClient);
-            this.Controls.Add(this.txtClientId);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvService);
@@ -251,8 +208,8 @@
             this.Name = "ServicesUser";
             this.Size = new System.Drawing.Size(1080, 573);
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,9 +225,6 @@
         private System.Windows.Forms.Button btnServiceUpdate;
         private System.Windows.Forms.Button btnServiceInsert;
         private System.Windows.Forms.Label lblProductCompany;
-        private System.Windows.Forms.Button searchClient;
-        private System.Windows.Forms.TextBox txtClientId;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button searchProduct;
         private System.Windows.Forms.TextBox txtProductId;

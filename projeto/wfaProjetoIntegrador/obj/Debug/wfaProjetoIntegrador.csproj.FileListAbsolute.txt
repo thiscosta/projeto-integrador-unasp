@@ -993,3 +993,4 @@ C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\pro
 C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\de\PdfSharp.resources.dll
 C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\de\PdfSharp.Charting.resources.dll
 C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.csproj.CopyComplete
+C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.SearchForm.resources

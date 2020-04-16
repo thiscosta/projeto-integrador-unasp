@@ -9,7 +9,7 @@ using wfaProjetoIntegrador.Repository;
 
 namespace wfaProjetoIntegrador.Controllers
 {
-    class ServicesUserController
+    class ServicesUserController 
     {
         private static ServiceRepository repo = new ServiceRepository();
 
@@ -17,6 +17,15 @@ namespace wfaProjetoIntegrador.Controllers
         {
             List<Service> list = repo.getAll();
             objetoResposta.DataSource = list;
+        }
+        public static List<Service> listAll()
+        {
+            return repo.getAll();
+        }
+
+        public static Service find(int id)
+        {
+            return repo.find(id);
         }
 
         public static void insert(Service service)
@@ -32,6 +41,11 @@ namespace wfaProjetoIntegrador.Controllers
         public static void delete(Service service)
         {
             repo.delete(service.id);
+        }
+
+        public static List<Service> findBy(string fieldName, dynamic value)
+        {
+            return repo.findBy(fieldName, value);
         }
     }
 }

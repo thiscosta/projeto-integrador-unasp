@@ -23,7 +23,6 @@ namespace wfaProjetoIntegrador.Views
         {
             InitializeComponent();
             TextBoxes = new List<TextBox> {
-                txtClientId,
                 txtProductId,
                 txtServiceDescription
             };
@@ -116,20 +115,17 @@ namespace wfaProjetoIntegrador.Views
         }
         private void setService()
         {
-            service.clientId = Int32.Parse(txtClientId.Text);
-            service.productId = Int32.Parse(txtProductId.Text);
-            service.description = txtServiceDescription.Text; 
+            service.description = txtServiceDescription.Text;
         }
 
         private void enableFields()
         {
             foreach (TextBox field in TextBoxes)
             {
-                if (field != txtClientId && field != txtProductId)
+                if (field != txtProductId)
                     field.Enabled = true;
                 else
                 {
-                    searchClient.Enabled = true;
                     searchProduct.Enabled = true;
                 }
             }
@@ -138,11 +134,10 @@ namespace wfaProjetoIntegrador.Views
         {
             foreach (TextBox field in TextBoxes)
             {
-                if (field != txtClientId && field != txtProductId)
+                if (field != txtProductId)
                     field.Enabled = false;
                 else
                 {
-                    searchClient.Enabled = false;
                     searchProduct.Enabled = false;
                 }
             }
@@ -180,8 +175,7 @@ namespace wfaProjetoIntegrador.Views
         }
         private void fillFields()
         {
-            txtClientId.Text = service.clientId.ToString();
-            txtProductId.Text = service.productId.ToString();
+            txtProductId.Text = ProductsUserController.find(service.productId).name;
             txtServiceDescription.Text = service.description;
         }
 
@@ -191,12 +185,22 @@ namespace wfaProjetoIntegrador.Views
             foreach (DataGridViewRow row in dgvService.SelectedRows)
             {
                 service.id = Int32.Parse(row.Cells[0].Value.ToString());
-                service.clientId = Int32.Parse(row.Cells[1].Value.ToString());
                 service.productId = Int32.Parse(row.Cells[2].Value.ToString());
                 service.description = row.Cells[3].Value.ToString();
             }
 
             fillFields();
+        }
+        
+        private void searchProduct_Click(object sender, EventArgs e)
+        {
+            SearchForm s = new SearchForm(new SearchFormImplementation((int Id) =>
+            {
+                service.productId = Id;
+                txtProductId.Text = ProductsUserController.find(Id).name;
+            }),
+            ProductsUserController.listAll().Cast<dynamic>().ToList());
+            s.ShowDialog();
         }
     }
 }

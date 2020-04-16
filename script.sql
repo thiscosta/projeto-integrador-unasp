@@ -22,6 +22,7 @@ buyPrice decimal(10)
 create table service (
 id integer primary key,
 description varchar(50),
+productId integer,
 foreign key (productId) references product(id)
 );
 
@@ -30,7 +31,9 @@ id integer primary key,
 payment varchar(25),
 price decimal,
 serviceId integer,
-foreign key (serviceId) references service(id)
+clientId integer,
+foreign key (serviceId) references service(id),
+foreign key (clientId) references customer(id)
 );
 
 create table users (

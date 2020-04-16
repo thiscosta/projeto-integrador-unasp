@@ -24,8 +24,8 @@ namespace wfaProjetoIntegrador.Controllers
                     MenuHome menu = new MenuHome();
                     Login login = new Login();
 
-                    login.Close();
-                    menu.Show();
+                    login.Dispose();
+                    menu.ShowDialog();
                 }
                 else
                 {
