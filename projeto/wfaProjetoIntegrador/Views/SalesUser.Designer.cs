@@ -165,6 +165,7 @@
             this.dgvSales.Name = "dgvSales";
             this.dgvSales.Size = new System.Drawing.Size(483, 409);
             this.dgvSales.TabIndex = 72;
+            this.dgvSales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSales_CellClick);
             this.dgvSales.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSales_CellContentClick);
             // 
             // txtServiceId

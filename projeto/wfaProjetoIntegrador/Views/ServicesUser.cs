@@ -185,8 +185,8 @@ namespace wfaProjetoIntegrador.Views
             foreach (DataGridViewRow row in dgvService.SelectedRows)
             {
                 service.id = Int32.Parse(row.Cells[0].Value.ToString());
-                service.productId = Int32.Parse(row.Cells[2].Value.ToString());
-                service.description = row.Cells[3].Value.ToString();
+                service.productId = Int32.Parse(row.Cells[1].Value.ToString());
+                service.description = row.Cells[2].Value.ToString();
             }
 
             fillFields();

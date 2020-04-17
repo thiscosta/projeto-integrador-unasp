@@ -237,5 +237,20 @@ namespace wfaProjetoIntegrador.Views
 
             s.ShowDialog();
         }
+
+        private void dgvSales_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Int32 catchRowIndex = dgvSales.SelectedCells[0].RowIndex;
+            foreach (DataGridViewRow row in dgvSales.SelectedRows)
+            {
+                sale.id = Int32.Parse(row.Cells[0].Value.ToString());
+                sale.clientId = Int32.Parse(row.Cells[1].Value.ToString());
+                sale.serviceId = Int32.Parse(row.Cells[2].Value.ToString());
+                sale.payment = row.Cells[3].Value.ToString();
+                sale.price = Double.Parse(row.Cells[4].Value.ToString());
+            }
+
+            fillFields();
+        }
     }
 }

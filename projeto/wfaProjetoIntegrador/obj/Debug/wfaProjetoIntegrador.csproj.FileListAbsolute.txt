@@ -465,7 +465,6 @@ C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\Bunifu
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.csprojAssemblyReference.cache
-C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.BillUser.resources
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.CustomerUser.resources
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.HomeUser.resources
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.Login.resources
@@ -478,8 +477,6 @@ C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaPro
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.csproj.CopyComplete
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.exe
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.pdb
-C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.UserControl1.resources
-C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.Reports.resources
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.exe.config
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\Microsoft.Win32.Primitives.dll
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\netstandard.dll
@@ -994,3 +991,4 @@ C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\pro
 C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\de\PdfSharp.Charting.resources.dll
 C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.csproj.CopyComplete
 C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.SearchForm.resources
+C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.SearchForm.resources

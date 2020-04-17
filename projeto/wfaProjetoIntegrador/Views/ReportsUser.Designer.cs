@@ -31,10 +31,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnDeleteBill = new System.Windows.Forms.Button();
             this.btnUpdateBill = new System.Windows.Forms.Button();
             this.btnInsertBill = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -70,20 +68,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1021, 297);
             this.dataGridView1.TabIndex = 80;
             // 
-            // btnDeleteBill
-            // 
-            this.btnDeleteBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.btnDeleteBill.FlatAppearance.BorderSize = 0;
-            this.btnDeleteBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteBill.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteBill.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDeleteBill.Location = new System.Drawing.Point(527, 432);
-            this.btnDeleteBill.Name = "btnDeleteBill";
-            this.btnDeleteBill.Size = new System.Drawing.Size(175, 106);
-            this.btnDeleteBill.TabIndex = 73;
-            this.btnDeleteBill.Text = "Delete";
-            this.btnDeleteBill.UseVisualStyleBackColor = false;
-            // 
             // btnUpdateBill
             // 
             this.btnUpdateBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
@@ -91,12 +75,13 @@
             this.btnUpdateBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateBill.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateBill.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUpdateBill.Location = new System.Drawing.Point(346, 432);
+            this.btnUpdateBill.Location = new System.Drawing.Point(615, 432);
             this.btnUpdateBill.Name = "btnUpdateBill";
             this.btnUpdateBill.Size = new System.Drawing.Size(175, 106);
             this.btnUpdateBill.TabIndex = 74;
-            this.btnUpdateBill.Text = "Update";
+            this.btnUpdateBill.Text = "Customers";
             this.btnUpdateBill.UseVisualStyleBackColor = false;
+            this.btnUpdateBill.Click += new System.EventHandler(this.btnUpdateBill_Click);
             // 
             // btnInsertBill
             // 
@@ -105,27 +90,13 @@
             this.btnInsertBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertBill.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertBill.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnInsertBill.Location = new System.Drawing.Point(165, 432);
+            this.btnInsertBill.Location = new System.Drawing.Point(354, 432);
             this.btnInsertBill.Name = "btnInsertBill";
             this.btnInsertBill.Size = new System.Drawing.Size(175, 106);
             this.btnInsertBill.TabIndex = 75;
             this.btnInsertBill.Text = "Products";
             this.btnInsertBill.UseVisualStyleBackColor = false;
             this.btnInsertBill.Click += new System.EventHandler(this.btnInsertBill_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(47)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(708, 432);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 106);
-            this.button1.TabIndex = 82;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnPrint
             // 
@@ -134,7 +105,7 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPrint.Location = new System.Drawing.Point(708, 67);
+            this.btnPrint.Location = new System.Drawing.Point(806, 35);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(175, 33);
             this.btnPrint.TabIndex = 83;
@@ -147,11 +118,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnDeleteBill);
             this.Controls.Add(this.btnUpdateBill);
             this.Controls.Add(this.btnInsertBill);
             this.Name = "ReportsUser";
@@ -169,10 +138,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnDeleteBill;
         private System.Windows.Forms.Button btnUpdateBill;
         private System.Windows.Forms.Button btnInsertBill;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPrint;
     }
 }

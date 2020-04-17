@@ -186,7 +186,8 @@ namespace wfaProjetoIntegrador.Views
                 prod.sellPrice = Double.Parse(row.Cells[2].Value.ToString());
                 prod.company = row.Cells[3].Value.ToString();
                 prod.quantity = Int32.Parse(row.Cells[4].Value.ToString());
-                prod.buyprice = Double.Parse(row.Cells[5].Value.ToString());
+                prod.category = row.Cells[5].Value.ToString();
+                prod.buyprice = Double.Parse(row.Cells[6].Value.ToString());
             }
 
             fillFields();
