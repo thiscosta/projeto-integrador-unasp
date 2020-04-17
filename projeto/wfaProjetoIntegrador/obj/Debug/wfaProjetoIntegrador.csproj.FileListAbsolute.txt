@@ -280,7 +280,6 @@ C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProje
 C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
 C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
 C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.csprojAssemblyReference.cache
-C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.BillUser.resources
 C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.CustomerUser.resources
 C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.HomeUser.resources
 C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.Login.resources
@@ -992,3 +991,8 @@ C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\pro
 C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.csproj.CopyComplete
 C:\Users\matheus.sales\Documents\Projeto Integrador\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.SearchForm.resources
 C:\thomas\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.SearchForm.resources
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\wfaProjetoIntegrador.exe.manifest
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\bin\Debug\wfaProjetoIntegrador.application
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.Views.SearchForm.resources
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.exe.manifest
+C:\Users\Thiago\Source\Repos\thiscosta\projeto-integrador-unasp\projeto\wfaProjetoIntegrador\obj\Debug\wfaProjetoIntegrador.application
